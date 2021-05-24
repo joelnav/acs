@@ -1,0 +1,4 @@
+joel:
+  full_name: Joel Navarrete
+  social_insurance_number: 123123123
+  birth_date: <%= "May 12 1992".to_datetime %>

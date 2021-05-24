@@ -1,0 +1,54 @@
+active_parent_account:
+  name: Active Parent Account
+  status: 0
+  balance: 1000000
+  account_owner: joel
+
+locked_parent_account:
+  name: Locked Parent Account
+  status: 1
+  balance: 20000000
+  account_owner: toronto_raptors
+
+canceled_parent_account:
+  name: Canceled Parent Account
+  status: 2
+  balance: 0
+  account_owner: joel
+
+active_branch_account_1_tree_1:
+  name: Active Branch Account 1 Tree 1
+  status: 0
+  balance: 50000
+  account_owner: joel
+
+active_branch_account_2_tree_1:
+  id: 3456789
+  name: Active Branch Account 2 Tree 1
+  status: 0
+  balance: 60000
+  account_owner: joel
+
+active_branch_account_1_tree_2:
+  name: Active Branch Account 1 Tree 2
+  status: 0
+  balance: 70000
+  account_owner: toronto_raptors
+
+active_branch_account_2_tree_2:
+  name: Active Branch Account 2 Tree 2
+  status: 0
+  balance: 80000
+  account_owner: toronto_raptors
+
+locked_branch_account_1_tree_1:
+  name: Locked Branch Account 1 Tree 1
+  status: 1
+  balance: 100000
+  account_owner: toronto_raptors
+
+canceled_branch_account_1_tree_1:
+  name: Canceled Branch Account 1 Tree 1
+  status: 2
+  balance: 0
+  account_owner: joel

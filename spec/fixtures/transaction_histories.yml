@@ -1,0 +1,22 @@
+contribution:
+  account: active_parent_account
+  amount: 40000
+  transaction_type: 0
+  contribution_code: '1A2B3C'
+
+deposit:
+  account: active_branch_account_1_tree_1
+  transaction_type: 1
+  amount: 20000
+  
+
+transfer:
+  account: active_branch_account_1_tree_1
+  amount: 30000
+  transaction_type: 2
+  source_account_id: 3456789
+  
+irreversible:
+  account: active_branch_account_1_tree_1
+  amount: 10000
+  reversible: false

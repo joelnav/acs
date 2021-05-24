@@ -1,0 +1,27 @@
+## Connecting the accounts
+
+# Tree 1
+account_connection_1:
+  parent_account: active_parent_account
+  branch_account: active_branch_account_1_tree_1
+
+account_connection_2:
+  parent_account: active_parent_account
+  branch_account: active_branch_account_2_tree_1
+
+account_connection_3:
+  parent_account: active_branch_account_1_tree_1
+  branch_account: locked_branch_account_1_tree_1
+
+account_connection_4:
+  parent_account: active_branch_account_1_tree_1
+  branch_account: canceled_branch_account_1_tree_1
+
+# Tree 2
+account_connection_5:
+  parent_account: locked_parent_account
+  branch_account: active_branch_account_1_tree_2
+
+account_connection_6:
+  parent_account: locked_parent_account
+  branch_account: active_branch_account_2_tree_2
