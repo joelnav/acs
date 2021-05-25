@@ -26,6 +26,32 @@ RSpec.describe Account, type: :model do
     end
   end
 
+  context 'CRUD tests' do
+    before(:all) do
+      @owner = Person.create(full_name: "Test Owner", social_insurance_number: 123451234, birth_date: "Jan 6, 1990")
+      @account = Account.create(name: "Test Account", balance: 50000, status: 0, account_owner: @owner)
+    end
+
+    it 'can create an account' do
+      expect(@account).to be_valid
+    end
+
+    it 'can read an account' do
+      expect(Account.find_by(name: "Test Account")).to eq(@account)
+    end
+
+    it 'can update an account' do
+      @account.update name: "Joel's Account"
+      expect(Account.find_by(name: "Joel's Account")).to eq(@account)
+    end
+
+    it 'can delete an account' do
+      @account.destroy
+      expect(Account.find_by(name: "Joel's Account")).to eq(nil)
+    end
+  end
+
+
   context 'feature tests' do
     it 'can get root of account' do
       root = accounts(:active_parent_account)
