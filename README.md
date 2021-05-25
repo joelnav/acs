@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Assumptions
 
-Things you may want to cover:
+**Environment**
+* Has postgres installed
+* Ruby version 2.6.3
 
-* Ruby version
+**Instructions**
+* Accounts will have enough money for transfer ammount
 
-* System dependencies
 
-* Configuration
+## Installation
 
-* Database creation
+**Initialization**
+* run `bundle install` then `rails db:create` in root folder
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+**Testing**
+* run `rspec` in root folder
 
 * ...
