@@ -33,7 +33,23 @@ RSpec.describe Account, type: :model do
       
       expect(child_account.root).to eq(root)
     end
+
+    it 'cannot unlock canceled or active account' do
+      account_1 = accounts(:canceled_branch_account_1_tree_1).unlock
+      account_2 = accounts(:active_branch_account_1_tree_1).unlock
+      
+      expect(account_1).to eq(false)
+      expect(account_2).to eq(false)
+
+    end
+
+    it 'can unlock locked account' do
+      account = accounts(:locked_branch_account_1_tree_1)
+      account.unlock
+      expect(account.active?).to eq(true)
+    end
   end
+
   context 'transaction tests' do
     
     it 'ensures contribution can only be to an active account' do

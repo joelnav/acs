@@ -21,6 +21,14 @@ class Account < ApplicationRecord
     balance/100.to_f
   end
 
+  def unlock
+    if locked?
+      update status: 0
+    else
+      false
+    end
+  end
+
   def contribute amount, code
     errors = verify_transaction({transaction_type: 'contribution', code: code})
     if errors.any?
@@ -83,4 +91,5 @@ class Account < ApplicationRecord
     root
     end
   end
+
 end
