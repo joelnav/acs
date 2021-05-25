@@ -23,7 +23,6 @@ active_branch_account_1_tree_1:
   account_owner: joel
 
 active_branch_account_2_tree_1:
-  id: 3456789
   name: Active Branch Account 2 Tree 1
   status: 0
   balance: 60000

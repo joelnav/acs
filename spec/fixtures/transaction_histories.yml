@@ -11,7 +11,7 @@ deposit:
   
 
 transfer:
-  account: active_branch_account_1_tree_1
+  account: active_branch_account_1_tree_2
   amount: 30000
   transaction_type: 2
   source_account_id: 3456789
@@ -19,4 +19,5 @@ transfer:
 irreversible:
   account: active_branch_account_1_tree_1
   amount: 10000
+  transaction_type: 1
   reversible: false
