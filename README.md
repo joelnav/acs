@@ -18,6 +18,116 @@
 **Initialization**
 * run `bundle install` then `rails db:create` in root folder.
 
-**Testing**
+**Running Tests**
 * run `rspec` in root folder.
 
+## Testing
+
+- If you want to create accounts, make sure you create a Person or Legal Person first.
+ 
+- If you want to create an account tree, make sure you pass in an existing `account_id` for a `parent_id`.
+
+
+**Account**
+
+* create
+
+  `POST /accounts`
+  
+  - Required Parameters
+  
+  ```
+  string account_owner_type Person/LegalPerson
+  int account_owner_id
+  string name
+  ```
+  
+  - Optional Parameters
+
+  ```
+  int status {0: active, 1: locked, 2: canceled }
+  int balance
+  int parent_id
+  ```
+
+* update
+
+  `PATCH /accounts/:id`
+
+* destroy
+
+  `DELETE /accounts/:id`
+
+* contribute
+
+  `POST /accounts/:account_id/contribute`
+  
+  - Required Parameters
+  
+  ```
+  int amount
+  string code
+  ```
+
+* deposit
+
+  `POST /accounts/:account_id/deposit`
+  
+  - Required Parameters
+  
+  ```
+  int amount
+  ```
+  
+* transfer
+
+  `POST /accounts/:account_id/transfer`
+  
+  - Required Parameters
+  
+  ```
+  int amount
+  int source_account_id
+  ```
+
+**Person**
+
+* create
+
+  `POST /people/create`
+  - Required Parameters
+  
+  ```
+  int social_insurance_number
+  string full_name
+  datetime birth_date
+  ```
+
+* update
+
+  `PATCH /people/:id`
+
+* destroy
+
+  `DELETE /people/:id`
+
+**Legal Person**
+
+* create
+
+  `POST /legal_people/create`
+  - Required Parameters
+  
+  ```
+  int federal_business_number
+  string company_name
+  string fantasy_name
+  ```
+  
+* update
+
+  `PATCH /legal_people/:id`
+
+* destroy
+  
+  `DELETE /legal_people/:id`
